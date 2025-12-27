@@ -48,13 +48,35 @@ This project is an improved version of [ebpfangel](https://github.com/TomasPhili
    cd eBPF-ransomware-reactive-detector
    ```
 
+3. (Optional) Validate installation:
+   ```bash
+   python3 validate.py
+   ```
+   This will check if all dependencies are installed and the BPF program can be compiled.
+
 ## Usage
+
+### Quick Start
 
 Run the detector with root privileges:
 
 ```bash
 sudo python3 detector.py
 ```
+
+### Validation (Before Running)
+
+To verify your system is ready, run the validation script:
+
+```bash
+python3 validate.py
+```
+
+This checks:
+- Python version
+- Required files
+- BCC availability
+- BPF program compilation
 
 The detector will:
 - Monitor file operations (open, create, delete, read, write, rename)
@@ -99,6 +121,21 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## CI/CD
+
+This project uses GitHub Actions for continuous integration. The CI pipeline:
+
+- Validates Python syntax
+- Compiles and validates the BPF program
+- Checks file structure and code quality
+- Verifies dependencies
+
+To see the CI status, check the Actions tab in GitHub. You can also run the validation locally:
+
+```bash
+python3 validate.py
+```
 
 ## Contributing
 
