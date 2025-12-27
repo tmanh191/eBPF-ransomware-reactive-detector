@@ -1,9 +1,0 @@
-# Python dependencies for eBPF Ransomware Detector
-# BCC (BPF Compiler Collection) is required but installed via system package manager
-
-# Note: BCC is typically installed via system package manager:
-#   sudo apt-get install bpfcc-tools python3-bpfcc
-# 
-# If installing via pip, use:
-#   pip install bcc
-
